@@ -48,7 +48,7 @@ public class RxServer {
                     .setDatabits(RxtxChannelConfig.Databits.DATABITS_8)
                     .setParitybit(RxtxChannelConfig.Paritybit.NONE)
                     .setStopbits(RxtxChannelConfig.Stopbits.STOPBITS_1);
-            future = bootstrap.connect(new RxtxDeviceAddress("COM8")).sync();
+            future = bootstrap.connect(new RxtxDeviceAddress("COM3")).sync();
             future.channel().closeFuture().sync();
         } catch (InterruptedException e) {
             e.printStackTrace();
